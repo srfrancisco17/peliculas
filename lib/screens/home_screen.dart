@@ -2,6 +2,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:peliculas/widgets/movie_slider.dart';
 import 'package:peliculas/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,13 +21,16 @@ class HomeScreen extends StatelessWidget {
         )
         ],
       ),
-      body: Column(
-        children: [
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
           //TODO:
-          CardSwiper()
-          //Listado horizontal de peliculas
-        ],
-      ),
+            CardSwiper(),
+            //Listado horizontal de peliculas
+            MovieSlider()
+          ],
+        ),
+      )
     );
   }
 }
