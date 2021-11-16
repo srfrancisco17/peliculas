@@ -23,8 +23,6 @@ class CardSwiper extends StatelessWidget {
       );
     }
 
-    print(movies);
-
     return Container(
       width: double.infinity,
       height: size.height * 0.5,
