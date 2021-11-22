@@ -2,9 +2,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:peliculas/providers/movies_provider.dart';
-import 'package:peliculas/widgets/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:peliculas/widgets/widgets.dart';
+import 'package:peliculas/providers/movies_provider.dart';
+import 'package:peliculas/search/search_delegate.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         actions: [
           IconButton(
-            onPressed: (){}, 
+            onPressed: () => showSearch(context: context, delegate: MovieSearchDelegate()), 
             icon: Icon(Icons.search_outlined
           )
         )

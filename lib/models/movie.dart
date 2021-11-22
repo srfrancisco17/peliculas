@@ -32,6 +32,8 @@ class Movie {
     bool video;
     double voteAverage;
     int voteCount;
+    
+    String? heroId;
 
     get fullPosterImg{
       if(this.posterPath != null){
@@ -41,7 +43,7 @@ class Movie {
       }
     }
     get fullBackdropPath{
-      if(this.posterPath != null){
+      if(this.backdropPath != null){
         return 'https://image.tmdb.org/t/p/w500${this.backdropPath}';
       }else{
         return 'https://i.stack.imgur.com/GNhxO.png';
